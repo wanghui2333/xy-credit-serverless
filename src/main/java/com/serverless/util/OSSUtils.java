@@ -17,8 +17,8 @@ public class OSSUtils {
 
     private static String endpoint = "http://oss-cn-hangzhou.aliyuncs.com";
 
-    private static String accessKeyId = "LTAI5tSP1toRuFZ6DPzrkaKT";
-    private static String accessKeySecret = "YsFd9TNM6DtM1cZCIvbGiIbpkEFQ6I";
+    private static String accessKeyId = "";
+    private static String accessKeySecret = "";
 
 
     private static OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);

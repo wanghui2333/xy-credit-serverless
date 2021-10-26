@@ -12,8 +12,8 @@ import com.aliyun.teaopenapi.models.*;
  * @Date : 10/26/21 1:01 PM
  */
 public class AliSmsUtils {
-    public static final String ACCESS_KEY_ID = "LTAI5tSP1toRuFZ6DPzrkaKT";
-    public static final String ACCESS_KEY_SECRET = "YsFd9TNM6DtM1cZCIvbGiIbpkEFQ6I";
+    public static final String ACCESS_KEY_ID = "";
+    public static final String ACCESS_KEY_SECRET = "";
     public static final Client client = createClient();
 
     public static Client createClient() {
@@ -48,8 +48,5 @@ public class AliSmsUtils {
         }
         return sendSmsResponse;
     }
-    public static void main(String[] args_) {
-        SendSmsResponse sendSmsResponse= sendApproveResult("王辉","15638896087");
-        System.out.println(sendSmsResponse);
-    }
+
 }

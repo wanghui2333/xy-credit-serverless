@@ -16,8 +16,8 @@ import java.util.List;
  */
 public class TableStoreUtils {
     private static final String endPoint = "https://xy-table-store.cn-hangzhou.ots.aliyuncs.com";
-    private static final String accessId = "LTAI5tSP1toRuFZ6DPzrkaKT";
-    private static final String accessKey = "YsFd9TNM6DtM1cZCIvbGiIbpkEFQ6I";
+    private static final String accessId = "";
+    private static final String accessKey = "";
     private static final String instanceName = "xy-table-store";
     private static final String applyPeopleTableName = "ApplyPeopleInfo";
     public static SyncClient client = new SyncClient(endPoint, accessId, accessKey,
@@ -134,24 +134,6 @@ public class TableStoreUtils {
         client.createTable(request);
     }
 
-    public static void main(String[] args) {
-//        createApplyPeopleTable();
-//        deleteTable(client,applyPeopleTableName);
-        ApplyPeopleInfo applyPeopleInfo = new ApplyPeopleInfo();
-        applyPeopleInfo.setId("411421199610257615");
-        applyPeopleInfo.setIdStartDate("2020-10-01");
-        applyPeopleInfo.setIdType("1");
-        applyPeopleInfo.setIdValidity("10");
-        applyPeopleInfo.setName("王辉");
-        applyPeopleInfo.setNamePinyin("wanghui");
-        applyPeopleInfo.setPhone("15638896087");
-        applyPeopleInfo.setPlaceDomicile("郑州市金水区");
-        applyPeopleInfo.setVerificationCode("257615");
-//        updateLimit("411421199610257615",999);
-//        putApplyPeople(applyPeopleInfo);
-        UpdateRowResponse updateRowResponse= updateLimit("411421199610257615",99999);
-        System.out.println(updateRowResponse);
-    }
 
     private static void deleteTable(SyncClient client, String tableName) {
         DeleteTableRequest request = new DeleteTableRequest(tableName);

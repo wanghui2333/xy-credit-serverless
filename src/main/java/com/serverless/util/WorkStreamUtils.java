@@ -22,8 +22,8 @@ public class WorkStreamUtils {
     static String execName = "";
     static DefaultProfile profile = DefaultProfile.getProfile(
             "cn-hangzhou",
-            "LTAI5tSP1toRuFZ6DPzrkaKT",
-            "YsFd9TNM6DtM1cZCIvbGiIbpkEFQ6I");
+            "",
+            "");
     static IAcsClient client = new DefaultAcsClient(profile);
 
     public static StartExecutionResponse startExecution(String id) {
@@ -62,7 +62,7 @@ public class WorkStreamUtils {
 
         try {
 //            // Start Execution
-            StartExecutionResponse startExeResp = startExecution("411421199610257615");
+            StartExecutionResponse startExeResp = startExecution("xx");
             execName = startExeResp.getName();
             System.out.println(startExeResp);
 
